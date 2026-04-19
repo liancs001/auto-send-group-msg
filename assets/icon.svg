@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <!-- 深紫渐变背景 -->
+    <radialGradient id="bgGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </radialGradient>
+    <!-- 气泡白色渐变 -->
+    <linearGradient id="bubbleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.97"/>
+      <stop offset="100%" stop-color="#e9d5ff" stop-opacity="0.92"/>
+    </linearGradient>
+    <!-- 闪电渐变 -->
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <!-- 投影 -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5.12" stdDeviation="7.68" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- 外圆背景 -->
+  <circle cx="128" cy="128" r="117.76" fill="url(#bgGrad)"/>
+
+  <!-- 气泡主体 -->
+  <rect x="43.52" y="58.88" width="168.96" height="107.52" rx="25.6" ry="25.6"
+        fill="url(#bubbleGrad)" filter="url(#shadow)"/>
+
+  <!-- 气泡尾巴 -->
+  <path d="M64,166.4 L46.08,199.68 L97.28,166.4 Z"
+        fill="url(#bubbleGrad)"/>
+
+  <!-- 闪电符号 ⚡ -->
+  <path d="M164.096,66.56
+           L133.12,123.0848
+           L156.7744,118.37440000000001
+           L145.5104,184.32
+           L180.99200000000002,125.44
+           L158.464,127.79520000000001
+           Z"
+        fill="url(#boltGrad)"/>
+
+  <!-- 右上角绿色活跃点 -->
+  <circle cx="186.88" cy="69.12" r="17.92"
+          fill="#4ade80" stroke="#1e1b4b" stroke-width="5.12"/>
+</svg>
